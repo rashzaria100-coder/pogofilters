@@ -67,7 +67,7 @@
     <button onclick="copyCode('code3')">📋 Copiar</button>
   </div>
 
-  <script>
+<script>
   const files = [
     { id: "code1", file: "code1.txt" },
     { id: "code2", file: "code2.txt" },
@@ -78,10 +78,12 @@
     fetch(item.file)
       .then(res => res.text())
       .then(text => {
+        // Mostrar en pantalla sin que el navegador intente interpretar &
         document.getElementById(item.id).textContent = text;
       });
   });
 </script>
+
 
   <script>
     function copyCode(id) {
@@ -93,6 +95,7 @@
   </script>
 </body>
 </html>
+
 
 
 
